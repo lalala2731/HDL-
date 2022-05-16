@@ -1,0 +1,345 @@
+html,body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+body {
+background: #061537;
+height: 100%;
+width: 100%;
+overflow: hidden;
+background-size: cover;
+
+}
+*{
+margin: 0;
+padding: 0;
+/* 禁止文字选择 */
+/*火狐*/
+/*webkit浏览器*/
+/*IE10*/
+/*早期浏览器*/
+/* -moz-user-select:none; 
+-webkit-user-select:none; 
+-ms-user-select:none; 
+-khtml-user-select:none; 
+user-select:none; */
+}
+ul li{
+list-style: none;
+}
+a{
+text-decoration: none;
+}
+span{color: rgba(255,255,255,.6);}
+.pulll_left{float:left;/* position: absolute;left: 60px; */}
+.pulll_right{float:right ;}
+.pulll_right_right{
+	position: absolute;
+	right: 0;
+}
+#span1{
+	float: left;
+}
+#span2{
+	float: left;
+}
+#AdventFood .pulll_right {
+	position: absolute;
+	left: 160px;
+}
+/* 清除浮动 */
+.clearfix:after, .clearfix:before {display: table;content: ""}
+.clearfix:after {clear: both}
+/* 颜色 */
+.ygg{color:#00ffc6;}
+.ygy{color:#ffe400;}
+.ygr{color:#fa5175;}
+.yggray{rgba(255,255,255,.6);}
+/*标题容器*/
+.header-wrapper {
+height: 80px;
+line-height: 80px;
+position: relative;
+}
+#header {
+/* Safari */
+/* display: -webkit-flex;  
+display: flex; */
+height: 80px;
+line-height: 80px;
+position: absolute;
+background: url(../img/head_bg.png) no-repeat center center;
+background-size: 100% 100%;
+max-width: 1650px;
+left: 0;
+right: 0;
+top: 0;
+bottom: 0;
+margin: 0 auto;
+justify-content:space-around;
+}
+/*标题下的div样式*/
+#header > div {
+float: left;
+padding-top: 15px;
+line-height: 65px;
+width: 30%;
+font-family: "微软雅黑";
+font-size: 32px;
+text-align: center;
+text-shadow: 0 0 10px #10EAED;
+letter-spacing:5px;
+/* color:#0183AA; */
+color: #10EAED;
+font-weight: 400;
+/* margin: 0 50px; */
+}
+#header div:last-child{
+	width: 10%;
+	/* position: relative; */
+}
+#selectid{
+	position: absolute;
+	right: 0;
+	top: 0;
+	border-radius: 5px;
+}
+/* 布局 中右 */
+.layout {
+height: calc(100% - 80px);
+width: calc(100% - 20px);
+margin: 0 auto;
+padding-top: 10px;
+padding-bottom: 3px;
+position: relative;
+}
+
+.layout .center{
+width: 72%;
+height: 100%;
+float: left;
+box-sizing: border-box;
+}
+.layout .right{
+width: 28%;
+height: 100%;
+float: left;
+box-sizing: border-box;
+}
+.right .visual_box:nth-child(1) {
+height: 25%;
+}
+.right .visual_box:nth-child(2) {
+height: 25%;
+}
+.right .visual_box:nth-child(3) {
+height: 50%;
+}
+.center .center_box:nth-child(1){
+height: 15%;width: 80%;
+margin: 0 auto;
+}
+.center .center_box:nth-child(2) {
+height: 85%;
+}
+
+/* 显示区标题样式以及内容区布局 */
+.visual_box .visual_title{position:relative;height:35px;margin:1px 0;}
+.visual_box .visual_title span{color:#fff;font-size:18px;line-height:35px;}
+.visual_box .visual_title img{width:100%;position:absolute;left:0;bottom:0;}
+.visual_box .visual_content{height:calc(100% - 35px);}
+.visual_box { overflow: hidden;margin: 3px;}
+
+/* 系统状态信息 */
+#systemStatus ul{ margin: 0 10px;  padding: 10px 0;height:calc(100%);}
+#systemStatus li{ position: relative; width: 100%;height:calc(30%);color:white;margin: 0px auto;text-align:center;}
+#systemStatus li p{
+display: inline-block;
+box-sizing: content-box;
+padding: 3px;
+width: calc(70%);
+height: calc(80%);
+/* text-indent:20px; */
+/* line-height: 43px; */
+text-align: left;
+background: url(../img/info-title.png) no-repeat;
+background-size: 100% 100%;
+/* 多余文字省略 */
+overflow: hidden;
+white-space:nowrap;
+text-overflow:ellipsis;
+}
+/* 设置文字垂直居中 */
+#systemStatus li p::before{
+display: inline-block;
+content: "";
+height: 100%;
+vertical-align: middle;
+}
+#systemStatus li p span {
+display: inline-block;
+margin-left: 7px;
+font-size: 16px;
+font-weight: 400;
+color: #fff;
+}
+
+
+/* 设备报警 */
+#DeviceAlarm {
+    overflow: hidden;
+    margin: 0 auto;
+}
+#DeviceAlarm a {
+    width: 20%;
+    text-align: center;
+    line-height: 25px;
+    color: #fff;
+    display: inline-block;
+    font-size: 16px;
+	margin-left: 20px;
+}
+#DeviceAlarm a:last-of-type {
+    width: 20%;
+}
+.sfzcll_pos_box{width:100%;height:calc(100% - 60px);margin: 0 auto;overflow: hidden;position: relative;}
+.sfzcll_box{width:95%;height:calc(50% - 10px);line-height:5;background:rgba(15,47,72,0.8);/* border:1px solid #1380bd; */position:relative;margin:10px 0 ;margin: 6px auto;}
+.sfzcll_box .sfzcll_bkJk{position:absolute;}
+.sfzcll_box .sfzcll_bkJk:first-of-type{top:-2px;left:-2px;}
+.sfzcll_box .sfzcll_bkJk:nth-child(2){top:-2px;right:-2px;}
+.sfzcll_box .sfzcll_bkJk:nth-child(3){bottom:-2px;right:-2px;}
+.sfzcll_box .sfzcll_bkJk:nth-child(4){bottom:-2px;left:-2px;}
+
+.sfzcll_box .sfzcll_smallBk{width:27%;height:100%;float:left;padding:4px 5px;box-sizing: border-box;}
+.sfzcll_box .sfzcll_smallBk:last-of-type{width:19%;}
+.sfzcll_box .sfzcll_smallBk .two{height:100%;background:url(../img/ksh38.png) no-repeat;background-size:100% 100%;text-align: center;line-height:24px;}
+.sfzcll_box .sfzcll_smallBk .one{height:100%;background:url(../img/ksh38.png) no-repeat;background-size:100% 100%;text-align: center;line-height:45px;}
+
+/* 无数据显示 */
+.sfzcll_pos_box #noInfo {
+   height: 40px;
+    /* position: absolute;
+    width: 80%;
+    line-height: 40px;
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%); */
+	position: absolute;
+	top: 60px;
+	left: 170px;
+    font-size: 18px;
+    color:#10EAED;
+    /* margin: 50px auto; */
+    text-align: center;
+    vertical-align: middle;
+    word-spacing: 3px;
+	/* display: block; */
+}
+/* 库存数字 */
+.center .center_box {
+    position: relative;
+    padding: 20px 10px 10px 10px;
+    /* background-color: #fff; */
+    box-sizing: border-box;
+}
+
+.center_box .StockNumberContainer {
+    width: calc(100% - 130px);
+    height: 140px;
+    background: rgba(16,54,87,0.5);
+    /* border: 1px solid #345f92; */
+    position: absolute;
+    top: 10%;
+    /* 水平居中 */
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 99;
+   
+}
+.barbox{border: 1px solid#345f92; position: relative;margin: 10px;}
+
+.barbox li,.barbox2 li{ float:left;width:33.3%; text-align: center; position: relative;}
+.barbox li{line-height: 75px;}
+.barbox2 li{line-height: 55px;}
+.barbox:before,
+.barbox:after{ position:absolute; width: 10px; height: 10px; content: ""; }
+.barbox:before{border-left: 2px solid #02a6b5;left: 0;border-top: 2px solid #02a6b5; }
+.barbox:after{border-right: 2px solid #02a6b5; right: 0; bottom: 0;border-bottom: 2px solid #02a6b5; }
+
+.barbox li:first-child:before{ position:absolute; content: ""; height:50%; width: 1px; background: rgba(255,255,255,.2); right: 0; top: 25%;}
+.barbox li:nth-child(2):before{ position:absolute; content: ""; height:50%; width: 1px; background: rgba(255,255,255,.2); right: 0; top: 25%;}
+@font-face{font-family: yjsz;src:url(/font/yjsz.TTF);/* IE9+,可以是具体的实际链接 */}
+.barbox li{ font-size: 50px; color: #ffeb7b; font-family: "yjsz";color:#20dbfd;text-shadow:0 0 25px #00d8ff;letter-spacing:5px;}
+.barbox2 li{ font-size: 20px; color: #637c9f; }
+/* 库存菜品 */
+.FoodStock{height:calc(100% - 1px);background:url(../img/ksh41.png) no-repeat;background-size:100% 100%;position:relative;width: 95%;margin: 0 auto;}
+.FoodStock .visual_bg_l{position:absolute;left:0;top:0;}
+.FoodStock .visual_bg_2{position:absolute;right:0;top:0;}
+.FoodStock .visual_bg_3{position:absolute;right:0;bottom:0;}
+.FoodStock .visual_bg_4{position:absolute;left:0;bottom:0;}
+.FoodStock .text{color:#fff;padding:15px 10px 5px;box-sizing: border-box;height: 60px;}
+.FoodStock .text h1{font-size:22px;margin-bottom:6px;font-weight: 500;}
+.FoodStock .FoodStockInfo{
+    width: 90%;
+    margin: 1px auto;
+    height: calc(100% - 80px);
+    overflow: hidden;
+}
+.FoodStockInfo ul {height: 100%;}
+.FoodStockInfo li{line-height:70px;width: 25%;float: left;position: relative;margin-top: 3px;}
+/* .FoodStockInfo li:first-of-type{margin-top: 3px;}
+.FoodStockInfo li:nth-of-type(2){margin-top: 3px;} */
+.FoodStockInfo img{ height: 36px; border-radius:50%; margin-right: 10px; display: inline-block; vertical-align: middle;}
+.FoodStockInfo span{  font-size: 16px; margin-right: 20px;font-weight: 600;}
+.FoodStockInfo .bar1,.FoodStockInfo .bar2,.FoodStockInfo .bar3{position:absolute;left:157px;top:25px; width: 70px;height:20px;line-height: 30px;border-radius:5px 10px 10px 5px;}
+.FoodStockInfo .bar1{background-color: #26b9dd;}
+.FoodStockInfo .bar2{background-color: #26b9dd;width: 50px;}
+.FoodStockInfo .bar3{background-color: red;width: 20px;}
+/* 临期菜品 */
+#AdventFood {overflow: hidden;width: 80%;margin: 0 auto;}
+.h1{
+    height: 10px;
+    width: 100%;
+    position: absolute; z-index:999;
+}
+#AdventFood ul{height: calc(100%);}
+#AdventFood li{line-height:70px;width: 100%;float: left;position: relative; }
+#AdventFood li:first-of-type{margin-top: 3px;}
+#AdventFood img{ height: 36px; border-radius:50%; margin-right: 10px; display: inline-block; vertical-align: middle;}
+#AdventFood span{  font-size: 16px; margin-right: 20px;font-weight: 600;}
+#AdventFood .bar1,#AdventFood .bar2,#AdventFood .bar3{position:absolute;left:170px;top:25px; width: 110px;height:20px;line-height: 30px;border-radius:5px 10px 10px 5px;}
+#AdventFood .bar1{background-color: yellow;}
+#AdventFood .bar2{background-color: #ffe400;width: 50px;}
+#AdventFood .bar3{background-color: #fa5175;width: 30px;}
+/* 设备报警 */
+.lei1 .sfzcll_box{margin-top: 3px;}
+.lei1 p{
+	overflow: hidden;
+	white-space:nowrap;
+}
+.pulll_left_right{
+	float: left;
+	position: absolute;
+	left: 60px;
+}
+.spanstyle {
+	display: inline-block;
+	margin-left: 7px;
+	font-size: 16px;
+	font-weight: 400;
+	color: #fff;
+}
+#change {
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+/* #noInfo{
+	display: block;
+} */
+
+/* .scrollTable{height:215px; overflow: hidden;margin:0 auto;width:95%;}
+.scrollTable ul{height: calc(100%);}
+.scrollTable li{line-height:38px; height:38px; text-indent: 10px; margin-bottom: 5px; }
+.scrollTable li p{border: 1px solid rgba(25,186,139,.7);color: aqua;background-color:#083B61; font-size: 16px;margin:0 auto;text-align:center; } */

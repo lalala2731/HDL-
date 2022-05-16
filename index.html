@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<script src="js/echarts.js"></script>
+		<script src="js/jquery-1.9.1.min.js"></script>
+		<link rel="stylesheet" href="css/index.css">
+		<title></title>
+		<style>
+		</style>
+	</head>
+	<body>
+		<!-- 标题 start -->
+		<div class="header-wrapper">
+			<div id="header">
+				<div id="left-img">
+					<img src="img/ksh31.png">
+				</div>
+				<div id="top-title" class="Chinese" >
+					可视化平台
+				</div>
+				<div class="English" style="display: none;">
+					Visual Platform
+				</div>
+				<div id="right-img">
+					<img src="img/ksh32.png">
+				</div>
+				
+			</div>
+			<div id="change" >
+				<select id="selectid" onchange="change()">
+					<option value ="Chinese">中文模式</option>
+					<option value ="English">English Style</option>
+				</select>
+			</div>
+		</div>
+		<!-- 标题 end -->
+		<!-- 总体布局 start -->
+		<div class="layout">
+			<!-- center start -->
+			<div class="center">
+				<div class="center_box">
+					<div class="StockNumberContainer">
+						<div class="barbox">
+							<ul class="clearfix">
+								<li class="pulll_left counter" name="normalinventory">1231</li>
+								<li class="pulll_left counter" name="warn_inventory">120</li>
+								<li class="pulll_left counter" name="expired_inventory">20</li>
+							</ul>
+						</div>
+						<div class="barbox2">
+							<ul class="clearfix">
+								<li class="pulll_left Chinese">正常菜品库存</li>
+								<li class="pulll_left Chinese">临期菜品库存</li>
+								<li class="pulll_left Chinese">过期菜品库存</li>
+								
+								<li class="pulll_left English" style="display:none">Normal Dish Inventory</li>
+								<li class="pulll_left English" style="display:none">Advent Dish Inventory</li>
+								<li class="pulll_left English" style="display:none">Expired Dish Inventory</li>
+							</ul>
+						</div>
+					</div>
+
+				</div>
+				<div class="center_box">
+					<div class="FoodStock">
+						<img class="visual_bg_l" src="img/ksh42.png">
+						<img class="visual_bg_2" src="img/ksh43.png">
+						<img class="visual_bg_3" src="img/ksh44.png">
+						<img class="visual_bg_4" src="img/ksh45.png">
+						<div class="text">
+							<h1 class="Chinese">库存菜品</h1>
+							<h1 class="English" style="display:none">Inventory Dish</h1>
+						</div>
+						<div class="FoodStockInfo" id="FoodStockInfo">
+							<ul class="clearfix" id="ul1">
+								<li class="clearfix"> <span class="pulll_left"><img src="img/v1.png">大白菜</span>
+									<div class="bar1"></div><span class="pulll_right ">20</span>
+								</li>
+								<li class="clearfix"> <span class="pulll_left"><img src="img/v2.png">包菜</span>
+									<div class="bar1"></div> <span class="pulll_right ">30</span>
+								</li>
+								<li class="clearfix"> <span class="pulll_left"><img src="img/v3.png">豆芽</span>
+									<div class="bar2"></div> <span class="pulll_right ygy">10</span>
+								</li>
+								<li class="clearfix"> <span class="pulll_left"><img src="img/v4.png">黄瓜</span>
+									<div class="bar3"></div><span class="pulll_right ygr">5</span>
+								</li>
+								<li class="clearfix"> <span class="pulll_left"><img src="img/v4.png">香菇</span>
+									<div class="bar1"></div><span class="pulll_right ">20</span>
+								</li>
+								<li class="clearfix"> <span class="pulll_left"><img src="img/v3.png">黄花菜</span>
+									<div class="bar1"></div><span class="pulll_right ">30</span>
+								</li>
+								<li class="clearfix"> <span class="pulll_left"><img src="img/v2.png">藕片</span>
+									<div class="bar2"></div> <span class="pulll_right ygy">10</span>
+								</li>
+								<li class="clearfix"> <span class="pulll_left"><img src="img/v1.png">香菜</span>
+									<div class="bar3"></div><span class="pulll_right ygr">5</span>
+								</li>
+								<li class="clearfix"> <span class="pulll_left"><img src="img/v1.png">小青菜</span>
+									<div class="bar1"></div> <span class="pulll_right ">20</span>
+								</li>
+								<li class="clearfix"> <span class="pulll_left"><img src="img/v2.png">土豆片</span>
+									<div class="bar1"></div><span class="pulll_right ">30</span>
+								</li>
+								<li class="clearfix"> <span class="pulll_left"><img src="img/v3.png">金针菇</span>
+									<div class="bar2"></div><span class="pulll_right ygy">10</span>
+								</li>
+								<li class="clearfix"> <span class="pulll_left"><img src="img/v3.png">蘑菇</span>
+									<div class="bar3"></div> <span class="pulll_right ygr">5</span>
+								</li>
+								<li class="clearfix"> <span class="pulll_left"><img src="img/r1.png">鸡翅</span>
+									<div class="bar1"></div><span class="pulll_right ">20</span>
+								</li>
+								<li class="clearfix"> <span class="pulll_left"><img src="img/r1.png">鸭舌</span>
+									<div class="bar1"></div> <span class="pulll_right ">30</span>
+								</li>
+								<li class="clearfix"> <span class="pulll_left"><img src="img/r1.png">香肠</span>
+									<div class="bar2"></div><span class="pulll_right ygy">10</span>
+								</li>
+								<li class="clearfix"> <span class="pulll_left"><img src="img/r1.png">羊肉串</span>
+									<div class="bar3"></div> <span class="pulll_right ygr">5</span>
+								</li>
+								<li class="clearfix"> <span class="pulll_left"><img src="img/v1.png">大白菜</span>
+									<div class="bar1"></div><span class="pulll_right ">20</span>
+								</li>
+								<li class="clearfix"> <span class="pulll_left"><img src="img/v2.png">包菜</span>
+									<div class="bar1"></div> <span class="pulll_right ">30</span>
+								</li>
+								<li class="clearfix"> <span class="pulll_left"><img src="img/v3.png">豆芽</span>
+									<div class="bar2"></div> <span class="pulll_right ygy">10</span>
+								</li>
+								<li class="clearfix"> <span class="pulll_left"><img src="img/v4.png">黄瓜</span>
+									<div class="bar3"></div><span class="pulll_right ygr">5</span>
+								</li>
+								<li class="clearfix"> <span class="pulll_left"><img src="img/v4.png">香菇</span>
+									<div class="bar1"></div><span class="pulll_right ">20</span>
+								</li>
+								<li class="clearfix"> <span class="pulll_left"><img src="img/v3.png">黄花菜</span>
+									<div class="bar1"></div><span class="pulll_right ">30</span>
+								</li>
+								<li class="clearfix"> <span class="pulll_left"><img src="img/v2.png">藕片</span>
+									<div class="bar2"></div> <span class="pulll_right ygy">10</span>
+								</li>
+								<li class="clearfix"> <span class="pulll_left"><img src="img/v1.png">香菜</span>
+									<div class="bar3"></div><span class="pulll_right ygr">5</span>
+								</li>
+								<li class="clearfix"> <span class="pulll_left"><img src="img/v1.png">小青菜</span>
+									<div class="bar1"></div> <span class="pulll_right ">20</span>
+								</li>
+								<li class="clearfix"> <span class="pulll_left"><img src="img/v2.png">土豆片</span>
+									<div class="bar1"></div><span class="pulll_right ">30</span>
+								</li>
+								<li class="clearfix"> <span class="pulll_left"><img src="img/v3.png">金针菇</span>
+									<div class="bar2"></div><span class="pulll_right ygy">10</span>
+								</li>
+								<li class="clearfix"> <span class="pulll_left"><img src="img/v3.png">蘑菇</span>
+									<div class="bar3"></div> <span class="pulll_right ygr">5</span>
+								</li>
+								<li class="clearfix"> <span class="pulll_left"><img src="img/r1.png">鸡翅</span>
+									<div class="bar1"></div><span class="pulll_right ">20</span>
+								</li>
+								<li class="clearfix"> <span class="pulll_left"><img src="img/r1.png">鸭舌</span>
+									<div class="bar1"></div> <span class="pulll_right ">30</span>
+								</li>
+								<li class="clearfix"> <span class="pulll_left"><img src="img/r1.png">香肠</span>
+									<div class="bar2"></div><span class="pulll_right ygy">10</span>
+								</li>
+								<li class="clearfix"> <span class="pulll_left"><img src="img/r1.png">羊肉串</span>
+									<div class="bar3"></div> <span class="pulll_right ygr">5</span>
+								</li>
+								<li class="clearfix"> <span class="pulll_left"><img src="img/v1.png">大白菜</span>
+									<div class="bar1"></div><span class="pulll_right ">20</span>
+								</li>
+								<li class="clearfix"> <span class="pulll_left"><img src="img/v2.png">包菜</span>
+									<div class="bar1"></div> <span class="pulll_right ">30</span>
+								</li>
+								<li class="clearfix"> <span class="pulll_left"><img src="img/v3.png">豆芽</span>
+									<div class="bar2"></div> <span class="pulll_right ygy">10</span>
+								</li>
+								<li class="clearfix"> <span class="pulll_left"><img src="img/v4.png">黄瓜</span>
+									<div class="bar3"></div><span class="pulll_right ygr">5</span>
+								</li>
+								<li class="clearfix"> <span class="pulll_left"><img src="img/v4.png">香菇</span>
+									<div class="bar1"></div><span class="pulll_right ">20</span>
+								</li>
+								<li class="clearfix"> <span class="pulll_left"><img src="img/v3.png">黄花菜</span>
+									<div class="bar1"></div><span class="pulll_right ">30</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- center end -->
+			<!-- right start -->
+			<div class="right">
+				<div class="visual_box">
+					<div class="visual_title">
+						<span class="Chinese">系统状态信息</span>
+						<span class="English" style="display: none;">System State Information</span>
+						<img src="img/ksh33.png">
+					</div>
+					<div class="visual_content" id="systemStatus">
+						<ul class="clearfix">
+							<li>
+								<p>
+									<span class="spanstyle">系统状态：</span>
+									<span class="systemstatus">正常运行</span>
+								</p>
+								<!-- <span>正常运行</span> -->
+							</li>
+							<li>
+								<p>
+									<span class="spanstyle">系统步骤：</span>
+									<span class="systemstep">步骤</span>
+								</p>
+								<!-- <span>系统步骤</span> -->
+							</li>
+							<li>
+								<p>
+									<span class="spanstyle">运行时间：</span>
+									<span class="time">2020-09-01 11:30:00</span>
+								</p>
+								<!-- <p>运行时间:2020-09-01 11:30:00</p> -->
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="visual_box">
+					<div class="visual_title" >
+						<span class="Chinese">设备预警信息</span>
+						<span class="English" style="display: none;">Equipment Warning Information</span>
+						<img src="img/ksh33.png">
+					</div>
+					<div class="visual_content" id='DeviceAlarm'>
+						<a href="javascript:;"class="astyle" >报警名称</a>
+						<a href="javascript:;"class="astyle" >报警等级</a>
+						<a href="javascript:;"class="astyle" >可能原因</a>
+						<a href="javascript:;"class="astyle" >推荐措施</a>
+						<div class="sfzcll_pos_box" id="DeviceAlarmList">
+							<div class="lei1">
+								
+								<div class="sfzcll_box" name="12">
+								<div class="sfzcll_smallBk">
+									<div class="ygg one">
+										<p>1#电机保护过载</p>
+									</div>
+								</div>
+								<div class="sfzcll_smallBk">
+									<div class="ygg one">
+										<p>一级</p>
+									</div>
+								</div>
+								<div class="sfzcll_smallBk">
+									<div class="ygg one">
+										<p>操作不当</p>
+									</div>
+								</div>
+								<div class="sfzcll_smallBk">
+									<div class="ygg one" style="height: 45px; !important">
+										<marquee>拔掉电源，重新启动1#电机，如果还不行，建议一以已亿抑亦易椅</marquee>
+									</div>
+								</div>
+							</div>
+							<div class="sfzcll_box" name="12">
+								<div class="sfzcll_smallBk">
+									<div class="ygy one">
+										<p>2#电机保护过载</p>
+									</div>
+								</div>
+								<div class="sfzcll_smallBk">
+									<div class="ygy one">
+										<p>二级</p>
+									</div>
+								</div>
+								<div class="sfzcll_smallBk">
+									<div class="ygy one">
+										<p>操作不当</p>
+									</div>
+								</div>
+								<div class="sfzcll_smallBk">
+									<div class="ygy one">
+										<p>拔掉电源</p>
+									</div>
+								</div>
+							</div>
+							<div class="sfzcll_box" name="12">
+								<div class="sfzcll_smallBk">
+									<div class="ygy one">
+										<p>3#电机保护过载</p>
+									</div>
+								</div>
+								<div class="sfzcll_smallBk">
+									<div class="ygy one">
+										<p>二级</p>
+									</div>
+								</div>
+								<div class="sfzcll_smallBk">
+									<div class="ygy one">
+										<p>操作不当</p>
+									</div>
+								</div>
+								<div class="sfzcll_smallBk">
+									<div class="ygy one">
+										<p>拔掉电源</p>
+									</div>
+								</div>
+							</div>
+							 <div class="sfzcll_box" name="12">
+							 	<div class="sfzcll_smallBk">
+							 		<div class="ygy one">
+							 			<p>3#电机保护过载</p>
+							 		</div>
+							 	</div>
+							 	<div class="sfzcll_smallBk">
+							 		<div class="ygy one">
+							 			<p>二级</p>
+							 		</div>
+							 	</div>
+							 	<div class="sfzcll_smallBk">
+							 		<div class="ygy one">
+							 			<p>操作不当</p>
+							 		</div>
+							 	</div>
+							 	<div class="sfzcll_smallBk">
+							 		<div class="ygy one">
+							 			<p>拔掉电源</p>
+							 		</div>
+							 	</div>
+							 </div>
+
+							<!-- 如果没有数据 使用这个 -->
+							<!-- <div id='noInfo'>暂无设备异常数据!</div> -->
+						</div>
+					</div>
+				</div>
+				</div>
+				<div class="visual_box">
+					<div class="visual_title">
+						<span class="Chinese">临期菜品</span>
+						<span class="English" style="display: none;">Advent Dishes</span>
+						<img src="img/ksh33.png">
+					</div>
+					<div class="visual_content">
+						<div id="AdventFood">
+							<div class="h1"></div> 
+							<ul class="clearfix" id="ul2">
+								<li class="clearfix" > <span id="span1"><img src="img/v3.png"></span><span class="pulll_left" style="height: 70px; !important"><marquee>大大大白菜</marquee></span>
+									<span class="pulll_right ">6903A096500104E0</span><span class="pulll_right_right ">20小时</span>
+								</li>
+								<li class="clearfix"> <span class="pulll_left"><img src="http://pos.hdlcdns.com/dev/upload/6c8dfde2-dbac-4c9d-94df-94211b0f4ead.jpg">包菜</span>
+									<span class="pulll_right ">6903A096500104E0</span><span class="pulll_right_right ">20小时</span>
+								</li>
+								<li class="clearfix"> <span class="pulll_left"><img src="img/v3.png">豆芽</span>
+									<span class="pulll_right ygy">6903A096500104E0</span><span class="pulll_right_right ">20小时</span>
+								</li>
+								<li class="clearfix"> <span class="pulll_left"><img src="img/v4.png">黄瓜</span>
+									<span class="pulll_right ygr">6903A096500104E0</span><span class="pulll_right_right ">20小时</span>
+								</li>
+
+								<li class="clearfix"> <span class="pulll_left"><img src="img/v4.png">香菇</span>
+									<span class="pulll_right ">6903A096500104E0</span><span class="pulll_right_right ">20小时</span>
+								</li>
+								<li class="clearfix"> <span class="pulll_left"><img src="img/v3.png">黄花菜</span>
+									<span class="pulll_right ">6903A096500104E0</span><span class="pulll_right_right ">20小时</span>
+								</li>
+								<li class="clearfix"> <span class="pulll_left"><img src="img/v2.png">藕片</span>
+									<span class="pulll_right ygy">6903A096500104E0</span><span class="pulll_right_right ">20小时</span>
+								</li>
+								<li class="clearfix"> <span class="pulll_left"><img src="img/v1.png">香菜</span>
+									<span class="pulll_right ygr">6903A096500104E0</span><span class="pulll_right_right ">20小时</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			 <!-- right end -->
+			 </div>
+		<!-- 总体布局 end -->
+		</div>
+	</body>
+<script src="js/apijs.js"></script>
+<script src="js/index.js"></script>
+<script src="js/mqttws31.min.js"></script>
+<script src="js/mqttjs.js"></script>
+</html>
